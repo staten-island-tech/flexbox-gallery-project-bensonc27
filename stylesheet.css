@@ -3,7 +3,6 @@ body{
     padding: 0;
     margin: 0;
     background: url(/Images/istockphoto-1011583646-612x612.jpg);
-    
 }
 .container{
     display: flex;
@@ -19,22 +18,22 @@ body{
     height: 18rem;
 }
 #card-common{
-    background-color: rgb(211, 211, 211);
+    background: url(https://img.freepik.com/premium-photo/white-old-concrete-wall-with-grunge-texture-soft-white-background-banner-format_29977-14699.jpg?ga=GA1.1.1115663783.1726762564&semt=ais_hybrid);
     color: brown;
     font-family: "Unlock", serif;
 }
 #card-rare{
-    background-color: rgb(144, 238, 144);
     color: darkgreen;
     font-family: "Trade Winds", system-ui;
+    background: url(https://img.freepik.com/premium-photo/misty-green-foggy-abstract-background_53876-359329.jpg?ga=GA1.1.1115663783.1726762564&semt=ais_hybrid);
 }
 #card-epic{
-    background-color: rgb(218,177,218);
-    color: darkorchid;
+    background: url(https://img.freepik.com/premium-photo/rough-gradient-purple-wall-background-texture_135595-113058.jpg);
+    color: black;
     font-family: "Fascinate Inline", system-ui;
 }
 #card-legendary{
-    background-color: rgb(255,179,67);
+    background: url(https://p4.wallpaperbetter.com/wallpaper/61/509/195/background-gold-golden-gold-wallpaper-preview.jpg);
     color: darkred;
     font-family: "Jacques Francois Shadow", serif;
 }

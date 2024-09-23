@@ -4,6 +4,12 @@ body{
     margin: 0;
     background: url(/Images/istockphoto-1011583646-612x612.jpg);
 }
+.Title{
+    text-align: center;
+    background-color: beige;
+    font-family: "Sofadi One", system-ui;
+    color: goldenrod;
+}
 .container{
     display: flex;
     justify-content: space-around;
@@ -42,6 +48,8 @@ body{
     margin-top: 0.1rem;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    opacity: 0;
+
 }
 #desc-common{
     margin: 0.7rem;
@@ -51,9 +59,53 @@ body{
     height: 65%;
     width: 100%;
     object-fit: contain;
+    opacity: 0;
 }
 .card-header{
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    opacity: 0;
 }
+#card-common:hover{
+    box-shadow: 0 4px 8px green;
+    transform: translateY(-30px);
+}
+#card-rare:hover{
+    box-shadow: 0 4px 8px rgb(5, 97, 97) ;
+    transform: translateY(-30px);
+}
+#card-epic:hover{
+    box-shadow: 0 4px 8px blueviolet ;
+    transform: translateY(-30px);
+}
+#card-legendary:hover{
+    box-shadow: 0 4px 8px darkred ;
+    transform: translateY(-30px);
+}
+.card:hover
+.card-desc{
+    opacity: 1;
+    transition: 500ms ease-in-out;
+    color: rgb(241, 161, 0);
+    background-color: black;
+    scale: 1.1;
+}
+.card:hover
+.card-img{
+    opacity: 1;
+    transition: 500ms ease-in-out;
+}
+.card:hover
+.card-header{
+    opacity: 1;
+    transition:500ms ease-in-out;
+    background-color: azure;
+}
+
+
+    
+
+
+
+

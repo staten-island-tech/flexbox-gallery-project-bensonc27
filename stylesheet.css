@@ -1,195 +1,186 @@
-body{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    background: url(/Images/istockphoto-1011583646-612x612.jpg);
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: url(/Images/istockphoto-1011583646-612x612.jpg);
 }
-.Title{
-    text-align: center;
-    background-color: beige;
-    font-family: "Sofadi One", system-ui;
-    color: goldenrod;
+.Title {
+  text-align: center;
+  background-color: beige;
+  font-family: "Sofadi One", system-ui;
+  color: goldenrod;
 }
-.container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    font-size: 15px;
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.card{
-    align-items: center;
-    border: 4px solid black;
-    margin: 1rem;
-    width: 21%;
-    height: 18rem;
+.card {
+  align-items: center;
+  border: 4px solid black;
+  margin: 1rem;
+  width: 21%;
+  height: 18rem;
+  background-size: cover;
+  max-height: 100%;
+  max-width: 100%;
+  transition: box-shadow 500ms ease-in-out;
 }
-#card-common{
-    background: url(https://img.freepik.com/premium-photo/white-old-concrete-wall-with-grunge-texture-soft-white-background-banner-format_29977-14699.jpg?ga=GA1.1.1115663783.1726762564&semt=ais_hybrid);
-    color: brown;
-    font-family: "Unlock", serif;
+#card-common {
+  background: url(https://img.freepik.com/premium-photo/white-old-concrete-wall-with-grunge-texture-soft-white-background-banner-format_29977-14699.jpg?ga=GA1.1.1115663783.1726762564&semt=ais_hybrid);
+  color: brown;
+  font-family: "Unlock", serif;
 }
-#card-rare{
-    color: darkgreen;
-    font-family: "Trade Winds", system-ui;
-    background: url(https://img.freepik.com/premium-photo/misty-green-foggy-abstract-background_53876-359329.jpg?ga=GA1.1.1115663783.1726762564&semt=ais_hybrid);
+#card-rare {
+  color: darkgreen;
+  font-family: "Trade Winds", system-ui;
+  background: url(https://img.freepik.com/premium-photo/misty-green-foggy-abstract-background_53876-359329.jpg?ga=GA1.1.1115663783.1726762564&semt=ais_hybrid);
 }
-#card-epic{
-    background: url(https://img.freepik.com/premium-photo/rough-gradient-purple-wall-background-texture_135595-113058.jpg);
-    color: black;
-    font-family: "Fascinate Inline", system-ui;
+#card-epic {
+  background: url(https://img.freepik.com/premium-photo/rough-gradient-purple-wall-background-texture_135595-113058.jpg);
+  color: black;
+  font-family: "Fascinate Inline", system-ui;
 }
-#card-legendary{
-    background: url(https://p4.wallpaperbetter.com/wallpaper/61/509/195/background-gold-golden-gold-wallpaper-preview.jpg);
-    color: darkred;
-    font-family: "Jacques Francois Shadow", serif;
+#card-legendary {
+  background: url(https://p4.wallpaperbetter.com/wallpaper/61/509/195/background-gold-golden-gold-wallpaper-preview.jpg);
+  color: darkred;
+  font-family: "Jacques Francois Shadow", serif;
 }
-.card-cost{
-    text-align: center;
-    margin-top: 0.1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    opacity: 0;
-
+.card-cost {
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  opacity: 0;
 }
-#desc-common{
-    margin: 0.7rem;
+#desc-common {
+  margin: 0.7rem;
 }
-.card-img{   
-    height: 65%;
-    width: 100%;
-    object-fit: contain;
-    opacity: 0;
+.card-img {
+  height: 65%;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0;
 }
-.card-header{
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    opacity: 0;
+.card-header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0;
 }
-.card:hover{
-    transform: translateY(-30px);
+.card:hover {
+  transform: translateY(-30px);
 }
-#card-common:hover{
-    box-shadow: 0 4px 8px green;
-    animation: big 500ms infinite;
+#card-common:hover {
+  box-shadow: 0 4px 8px green;
+  animation: enlarge 500ms ease-in-out infinite;
 }
-#card-rare:hover{
-    box-shadow: 0 4px 8px rgb(5, 97, 97) ;
-    animation: move 500ms infinite alternate;
+#card-rare:hover {
+  box-shadow: 0 4px 8px rgb(5, 97, 97);
+  animation: move 500ms infinite alternate;
 }
-#card-epic:hover{
-    box-shadow: 0 4px 8px blueviolet ;
-    animation: rotate 1s infinite;
+#card-epic:hover {
+  box-shadow: 0 4px 8px blueviolet;
+  animation: rotate 500ms forwards;
 }
-#card-legendary:hover{
-    box-shadow: 0 4px 8px darkred ;
-    animation: color 500ms infinite;
+#card-legendary:hover {
+  box-shadow: 0 4px 8px darkred;
+  animation: color 500ms infinite;
 }
-.card:hover
-.card-cost{
-    opacity: 1;
-    transition: 500ms ease-in-out;
-    color: rgb(241, 161, 0);
-    background-color: black;
-    transform: scale(1.1);
+.card:hover .card-cost,
+.card:hover .card-img,
+.card:hover .card-header {
+  opacity: 1;
+  transition: 500ms ease-in-out;
 }
-.card:hover
-.card-img{
-    opacity: 1;
-    transition: 500ms ease-in-out;
+.card:hover .card-cost {
+  color: rgb(241, 161, 0);
+  background-color: black;
+  transform: scale(1.1);
 }
-.card:hover
-.card-header{
-    opacity: 1;
-    transition:500ms ease-in-out;
-    background-color: azure;
+.card:hover .card-header {
+  background-color: azure;
 }
-@keyframes color{
-    0%{
-        filter:hue-rotate(90deg);
-    }
-    25%{
-        filter:hue-rotate(180deg);
-    }
-    50%{
-        filter:hue-rotate(270deg);
-    }
-    100%{
-        filter:hue-rotate(360deg);
-    }
+@keyframes color {
+  0% {
+    filter: hue-rotate(90deg);
+  }
+  25% {
+    filter: hue-rotate(180deg);
+  }
+  50% {
+    filter: hue-rotate(270deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(90deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    75%{
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
     transform: rotate(270deg);
-
-    }
-    100%{
-        transform: rotate(360deg);  
-    }
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-@keyframes big{
-    0%{
-        transform: scale(1.05);
-    }
-    20%{
-        transform: scale(1.1);
-    }
-    40%{
-        transform: scale(1.15);
-    }
-    60%{
-        transform: scale(1.1);
-    }
-    80%{
-        transform: scale(1.05);
-    }
-    100%{
-        transform: scale(1.0);
-    }
+@keyframes enlarge {
+  0% {
+    transform: scale(1.05);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-@keyframes move{
-    0%{
-        transform: translateX(30px);
-    }
-    25%{
-        transform: translateX(15px);
-    }
-    50%{
-        transform: translateX(0px);
-    }
-    75%{
-        transform: translateX(-15px);
-    }
-    100%{
-        transform: translateX(-30px);
-    }
+@keyframes move {
+  0% {
+    transform: translateX(30px);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
 }
-@media screen and (max-width: 1030px){
-    .card{
-        width:25%;
-    }
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 25%;
+  }
 }
-@media screen and (max-width: 780px){
-    .card{
-        width:40%;
-    }
+@media screen and (max-width: 768px) {
+  .card {
+    width: 40%;
+  }
 }
-@media screen and (max-width: 520px){
-    .card{
-        width:70%;
-    }
+@media screen and (max-width: 520px) {
+  .card {
+    width: 70%;
+  }
 }
-    
-
-
-
-
